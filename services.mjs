@@ -2,7 +2,8 @@
 class BookService {
 
   constructor() {
-    this.apiKey = 'AIzaSyC6WNqTgU68aVcyUDl2f_O0X_Cl4-ewtSg';
+    this.apiKey = process.env.GOOGLE_BOOKS_API_KEY;
+    console.log(`api key is ${this.apiKey}`);
   }
 
   async getBookDetails(title, author) {
